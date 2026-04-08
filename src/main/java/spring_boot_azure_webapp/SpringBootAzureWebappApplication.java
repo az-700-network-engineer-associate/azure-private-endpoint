@@ -7,7 +7,9 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 public class SpringBootAzureWebappApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(SpringBootAzureWebappApplication.class, args);
+
+		SpringApplication
+				.run(SpringBootAzureWebappApplication.class, args);
 	}
 
 }
