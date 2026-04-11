@@ -1,15 +1,15 @@
-package spring_boot_azure_webapp;
+package com.cloud.product;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class SpringBootAzureWebappApplication {
+public class ProductCloudApplication {
 
 	public static void main(String[] args) {
 
 		SpringApplication
-				.run(SpringBootAzureWebappApplication.class, args);
+				.run(ProductCloudApplication.class, args);
 	}
 
 }

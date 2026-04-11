@@ -1,4 +1,4 @@
-package spring_boot_azure_webapp.controller;
+package com.cloud.product.controller;
 
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;

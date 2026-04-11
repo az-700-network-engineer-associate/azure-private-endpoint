@@ -9,7 +9,7 @@ RUN mkdir /data
 RUN chown -R azureuser:azureuser /home/azureuser /data
 COPY scripts/entrypoint.sh /entrypoint.sh
 RUN chmod +x /entrypoint.sh
-COPY target/spring-boot-azure-webapp-1.0.0-SNAPSHOT.jar spring-boot-az700-web-app.jar
-RUN chown azureuser:azureuser spring-boot-az700-web-app.jar
+COPY target/product-cloud-service-1.0.0-SNAPSHOT.jar product-cloud-service.jar
+RUN chown azureuser:azureuser product-cloud-service.jar
 USER azureuser
 ENTRYPOINT ["/entrypoint.sh"]
