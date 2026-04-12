@@ -5,25 +5,17 @@ import org.springframework.web.bind.annotation.RestController;
 
 import java.net.InetAddress;
 import java.net.UnknownHostException;
+import java.util.Map;
 
-@RestController
+@RestController("/products/vm")
 public class InfoController {
-
     @GetMapping("/info")
-    public String getInfo() throws UnknownHostException {
-        InetAddress ip = InetAddress.getLocalHost();
-
-        String hostname = ip.getHostName();
-        String hostAddress = ip.getHostAddress();
-
-        return "Hostname: " + hostname + " | IP: " + hostAddress;
-    }
-    @GetMapping("/vm-info")
-    public String getVmInfo() {
+    public Map<String,String> getVmInfo() {
         String hostName = System.getenv("HOST_NAME");
         String hostIp = System.getenv("HOST_IP");
-
-        return "Guest OS Hostname: " + hostName +
-                " | Guest OS IP: " + hostIp;
+        return Map.of(
+                "Hostname", hostName != null ? hostName : "Unknown",
+                "Host-IP", hostIp != null ? hostIp : "Unknown"
+        );
     }
 }
