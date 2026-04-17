@@ -10,7 +10,7 @@
 	</parent>
 	<packaging>jar</packaging>
 	<groupId>com.cloud.product</groupId>
-	<artifactId>product-cloud-service</artifactId>
+	<artifactId>azure-private-access-to-services</artifactId>
 	<version>1.0.0-SNAPSHOT</version>
 	<name/>
 	<description/>
@@ -49,6 +49,11 @@
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-test</artifactId>
 			<scope>test</scope>
+		</dependency>
+		<dependency>
+			<groupId>com.azure</groupId>
+			<artifactId>azure-storage-blob</artifactId>
+			<version>12.25.0</version>
 		</dependency>
 	</dependencies>
 

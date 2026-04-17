@@ -4,7 +4,7 @@ server:
   port: 9090
 spring:
   application:
-    name: product-cloud-service
+    name: azure-storage-acct-cloud-service
 
 management:
   endpoints:
@@ -14,3 +14,7 @@ management:
   endpoint:
     health:
       show-details: always
+azure:
+  storage:
+    connection-string: ${STORAGE_CONNECTION_STRING}
+    container-name: ${CONTAINER_NAME}

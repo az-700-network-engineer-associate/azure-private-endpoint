@@ -9,7 +9,7 @@ RUN mkdir /data
 RUN chown -R azureuser:azureuser /home/azureuser /data
 COPY scripts/entrypoint.sh /entrypoint.sh
 RUN chmod +x /entrypoint.sh
-COPY target/product-cloud-service-1.0.0-SNAPSHOT.jar product-cloud-service.jar
-RUN chown azureuser:azureuser product-cloud-service.jar
+COPY target/azure-private-access-to-services-1.0.0-SNAPSHOT.jar azure-private-access-to-services.jar
+RUN chown azureuser:azureuser azure-private-access-to-services.jar
 USER azureuser
 ENTRYPOINT ["/entrypoint.sh"]
